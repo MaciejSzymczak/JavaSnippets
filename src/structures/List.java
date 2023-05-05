@@ -1,11 +1,13 @@
 package structures;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class List {
 
+	private static Object object;
+
 	public static void main(String[] args) {
-		java.util.List<String> pickListValues= new ArrayList<String>();
+		ArrayList<String> pickListValues= new ArrayList<String>();
 		pickListValues.clear();
 		pickListValues.add("benefits of DD");
 		pickListValues.add("comfort & Dual Technology");
@@ -14,8 +16,16 @@ public class List {
 		pickListValues.add("the most extensive range");
 		pickListValues.add("astig.correction from >0,75DC");
 		pickListValues.add("competitive msg vs DACP Toric");
-		pickListValues.add("competitive msg vs Clariti Tor");
+		pickListValues.add("competitive msg vs Clariti Tor");		
 		
+		//sort!
+		Collections.sort(pickListValues); 
+		
+		for(String x : pickListValues) {
+			System.out.println( x );
+		}
+		
+		System.out.println("=== obsolete, works as well ===");
 		for(int i=0;i < pickListValues.size(); i++) {
 			System.out.println( pickListValues.get(i) );
 		}
